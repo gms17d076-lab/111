@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-р цэцэрлэгийн төсөл</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fdfcfb 0%, #ffe8f0 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #444;
+        }
+        .container {
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #ff4d94;
+            font-size: 24px;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+        .btn {
+            background: white;
+            border: 2px solid #ff4d94;
+            color: #ff4d94;
+            padding: 15px 20px;
+            margin: 12px 0;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 77, 148, 0.1);
+        }
+        .btn:hover {
+            background: #ff4d94;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .content {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            text-align: left;
+            border: 1px solid #ffc2d1;
+            line-height: 1.6;
+            animation: fadeIn 0.4s ease;
+            font-size: 15px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .budget-table td, .budget-table th {
+            border: 1px solid #eee;
+            padding: 10px;
+        }
+        .img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .img-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .section-title {
+            display: block;
+            margin-top: 15px;
+            color: #ff4d94;
+            font-weight: bold;
+            border-bottom: 1px dashed #ffc2d1;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏗️ САЙНШАНД СУМЫН ХҮҮХДИЙН 11-Р ЦЭЦЭРЛЭГИЙН БАРИЛГЫН ИХ ЗАСВАРЫН ТӨСӨЛ</h1>
+
+        <div class="btn" onclick="toggleContent('intro')">🏢 ЦЭЦЭРЛЭГИЙН ТАНИЛЦУУЛГА</div>
+        <div id="intro" class="content">
+            Цэцэрлэг анх 2015 онд байгуулагдснаас хойш 11 дэх жилдээ Сургуулийн өмнөх боловсрол олгох үйл ажиллагаагаа амжилттай зохион байгуулан ажиллаж байна. Манай цэцэрлэг 7 бүлэг 150 хүүхдийн хүчин чадалтай. <br><br>
+            2025-2026 оны хичээлийн жилд тус цэцэрлэгт 31 багш ажилтан ажиллаж нийт 234 хүүхэд хөгжиж төлөвшиж байна. Мөн Дорноговь аймгийн хэмжээнд зөвхөн манай цэцэрлэг нь хөгжлийн бэрхшээлтэй буюу тусгай хэрэгцээт хүүхдүүдийн анги бүлэгтэй.
+        </div>
+
+        <div class="btn" onclick="toggleContent('part1')">📄 НЭГ. ТӨСЛИЙН НЭР</div>
+        <div id="part1" class="content">
+            Сайншанд сумын хүүхдийн 11-р цэцэрлэгийн барилгын их засварын төсөл.
+        </div>
+
+        <div class="btn" onclick="toggleContent('part2')">🎯 ХОЁР. ТӨСЛИЙН ЗОРИЛГО</div>
+        <div id="part2" class="content">
+            • Барилгын аюулгүй байдал, дулаан алдагдлыг багасгах.<br>
+            • Ашиглалтын хугацааг уртасгаж, үйлчилгээний чанарыг сайжруулах.<br>
+            • Хүүхдэд ээлтэй, эрүүл ахуйн шаардлага хангасан орчин бүрдүүлэх.
+        </div>
+
+        <div class="btn" onclick="toggleContent('part3')">📋 ГУРАВ. ТӨСЛИЙН ЗОРИЛТ</div>
+        <div id="part3" class="content">
+            1. Дээврийн материалыг шинэчилж, чийгнээс хамгаалах.<br>
+            2. Байгальд ээлтэй, хоргүй материал ашиглах.<br>
+            3. Багш, суралцагчид, эцэг эхчүүдийн сэтгэл ханамжийг нэмэгдүүлэх.
+        </div>
+
+        <div class="btn" onclick="toggleContent('part4')">💡 ДӨРӨВ. ТӨСЛИЙН ҮНДЭСЛЭЛ</div>
+        <div id="part4" class="content">
+            Цэцэрлэгийн барилгын гадна фасад болон дээврийг иж бүрэн шинэчлэн сайжруулснаар, хүүхдэд аюулгүй, эрүүл ахуйн шаардлага хангасан, дулаан хадгалалт сайтай, өнгө үзэмжтэй орчныг бүрдүүлэхэд оршино. 
+        </div>
+
+        <div class="btn" onclick="toggleContent('part5')">⚠️ ТАВ. ТӨСЛИЙН ХЭРЭГЦЭЭ (Зурагтай)</div>
+        <div id="part5" class="content">
+            
+            <span class="section-title">5.1 Дээвэр:</span>
+            Дээврээс ус чийг нэвчиж дусаал гоожиж анги танхимуудын эд хөрөнгөнд хохирол учирч байна.
+            <div class="img-grid">
+                <img src="LINK_1" alt="Зураг 1">
+                <img src="LINK_2" alt="Зураг 2">
+            </div>
+
+            <span class="section-title">5.2 Гадна фасад:</span>
+            Өнгө будаг муудаж, ханын ан цав үүссэн. Цонхны амалгаа муудаж дулаан алдалт ихэссэн.
+            <div class="img-grid">
+                <img src="LINK_3" alt="Зураг 3">
+                <img src="LINK_4" alt="Зураг 4">
+            </div>
+
+            <span class="section-title">5.3 Дулаан алдагдал:</span>
+            Өвлийн улиралд стандарт хэмжээнээс доош орж, хүүхдийн эрүүл мэндэд сөрөг нөлөө үзүүлж байна.
+            <div class="img-grid">
+                <img src="LINK_5" alt="Зураг 5">
+                <img src="LINK_6" alt="Зураг 6">
+            </div>
+
+            <span class="section-title">5.4 Сантехник:</span>
+            Шугам бөглөрч, бохирын хоолой задарч хальдаг зэрэг эрүүл ахуйн ноцтой зөрчил үүссэн.
+            <div class="img-grid">
+                <img src="LINK_7" alt="Зураг 7">
+                <img src="LINK_8" alt="Зураг 8">
+            </div>
+
+            <span class="section-title">5.5 Ангийн дотор засал:</span>
+            Мөөгөнцөр үүссэн, паркетин шал элэгдэж хөөсөн. Хаалганууд эвдэрч дулаан алдалтад нөлөөлж байна.
+            <div class="img-grid">
+                <img src="LINK_9" alt="Зураг 9">
+                <img src="LINK_10" alt="Зураг 10">
+            </div>
+        </div>
+
+        <div class="btn" onclick="toggleContent('part6')">💰 АРВАН ГУРАВ. ТӨСӨВ</div>
+        <div id="part6" class="content">
+            <table class="budget-table">
+                <tr style="background:#ff4d94; color:white;">
+                    <th>Зардлын нэр</th>
+                    <th>Дүн (Төгрөг)</th>
+                </tr>
+                <tr><td>Ажиллах хүч</td><td>64,521,626</td></tr>
+                <tr><td>Материал</td><td>131,821,167</td></tr>
+                <tr><td>Тээвэр, машин ашиглалт</td><td>4,599,961</td></tr>
+                <tr style="background:#fff0f5;"><td><b>НИЙТ ТӨСӨВ</b></td><td><b>304,920,783</b></td></tr>
+            </table>
+        </div>
+
+        <p style="font-size: 13px; color: #888; margin-top: 40px; font-style: italic;">
+            Төсөл боловсруулсан: Эрхлэгч Ж.Цэндмаа <br> 2026 он
+        </p>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            var isVisible = (content.style.display === "block");
+            
+            // Бүх контентыг хаах
+            var allContent = document.getElementsByClassName('content');
+            for (var i = 0; i < allContent.length; i++) {
+                allContent[i].style.display = 'none';
+            }
+            
+            // Зөвхөн дарсан контентыг нээх/хаах
+            if (!isVisible) {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

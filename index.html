@@ -225,5 +225,65 @@
             }
         }
     </script>
+
+    <div class="contact-btn" onclick="toggleContent('contact')">📞 ХОЛБОО БАРИХ</div>
+<div id="contact" class="content contact-box">
+    <div class="contact-item">
+        <strong>📱 Утас:</strong> <a href="tel:99119911">9911-XXXX</a> </div>
+    <div class="contact-item">
+        <strong>📧 Мэйл:</strong> <a href="mailto:info@11tsetserleg.mn">info@11tsetserleg.mn</a>
+    </div>
+    <div class="contact-item">
+        <strong>🔵 Фэйсбүүк:</strong> 
+        <a href="https://www.facebook.com/Urgahnaran11tsetserleg" target="_blank" class="fb-link">
+            Манай пэйж хуудас руу зочлох
+        </a>
+    </div>
+</div>
+
+<style>
+    /* Холбоо барих товчлуурын онцгой загвар */
+    .contact-btn {
+        background: #f8f9fa; /* Арай өөр цайвар өнгө */
+        border: 2px dashed var(--main-color); /* Тасархай хүрээ */
+        color: var(--main-color);
+        padding: 12px 20px;
+        margin: 25px 0 10px 0;
+        border-radius: 30px; /* Илүү бөөрөнхий */
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bold;
+        display: inline-block; /* Голлохын тулд */
+        transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover {
+        background: var(--main-color);
+        color: white;
+        border-style: solid;
+    }
+
+    .contact-box {
+        border: 2px solid #ffc2d1 !important;
+        background-color: #fffafb !important;
+    }
+
+    .contact-item {
+        margin: 10px 0;
+        padding: 5px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .contact-item a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .fb-link {
+        color: #1877F2 !important; /* Facebook-ийн өнгө */
+        text-decoration: underline !important;
+    }
+</style>
 </body>
 </html>
